@@ -1,0 +1,172 @@
+body{
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+	color: #4b4e56;
+	background: url("/static/app/img/bg.jpg");
+	
+	background-size: cover
+}
+.centrar-btns{
+	padding-top: 10px;
+
+
+}
+header {
+	background: #ff8a16;
+	color: #ffffff;
+	height: 80px;
+	padding-top: 16px;
+}
+
+.form {
+ padding-top: 190px;
+}
+.text-gris{
+	color: #7f8080;
+}
+.mensaje{
+	padding-top: 24px;
+	padding-bottom: 12px;
+}
+
+.bg-general{
+	background: #ffffff;
+	min-height: 500px;
+	width: 100%;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	padding: 24px;
+
+}
+.caption {
+	font-size: 12px;
+	padding-top: 12px;
+}
+.separador {
+	height: 4px;
+	width: 100%;
+	background: #e75025;
+
+}
+.bt-siguiente {
+	margin-top: 24px;
+}
+
+.logo{
+	width: 4%; 
+	display: inline; 
+	float: right; 
+	padding-top: 8px;
+}
+
+.bg-secundario{
+	min-height: 500px;
+	width: 100%;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	padding: 24px;
+
+}
+.card-seleccion {
+
+	background: #ffffff;
+	border-radius: 6px;
+	color: #7f8080;
+	width: 100%;
+	height: 60px;
+	margin-bottom: 24px;
+	font-size: 18px;
+
+}
+.big{
+	font-size: 40px;
+	padding-left: 16px;
+    padding-right: 16px;
+}
+
+.form-check-input {
+	width: 50px;
+    height: 50px;
+}
+
+.form-check {
+   
+    padding-left: 2.4em;
+   }
+
+.tamaño {
+	width: 20px !important;
+    height: 20px ;
+}
+
+.margen {
+	center margin-left: 24px;
+}
+
+
+
+
+@media (max-width: 768px)  { 
+.modelo {
+	display: none;
+}
+.form {
+ padding-top: 40px;
+ text-align: center;
+}
+.text-cuerpo {
+	font-size: 16px;
+}
+h1{
+	font-size: 26px;
+}
+header {
+	
+	height: 60px;
+	padding-top: 16px;
+}
+.logo{
+	width: 7%; 
+
+	padding-top: 0px;
+}
+
+.card-seleccion {
+
+	padding-bottom: 12px;
+
+}
+.margen{
+	margin-left: 42px;
+}
+.espaciado {
+	margin-top: -12px;
+}
+.espacio{
+	margin-left: 8px;
+	text-align: center;
+}
+		
+}
+
+@media (max-width: 1269px)  { 
+#detalle-millones{}
+	
+
+	
+}
+@media (max-width: 1199.98px)  { 
+	
+
+}
+
+@media (min-width: 1199.98px) { 
+	
+
+ }
+
+@media (min-width: 1400px) { 
+ 
+}
