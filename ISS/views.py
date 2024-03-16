@@ -30,7 +30,7 @@ def index(request):
                                 
                                 }            
         else:
-                messages.warning(request, "usuario no existe")
+                
                 datos = {
                         'personas': Persona.objects.none()
                 
@@ -40,10 +40,12 @@ def index(request):
 def step1(request):
     return render(request, 'app/step1.html')
 
-def step2(request):
+def step2(request):   
+
     return render(request, 'app/step2.html')
 
 def step3(request):
+ 
     return render(request, 'app/step3.html')
 
 def step4(request):
