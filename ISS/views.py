@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Persona
 from django.contrib import messages
 from django.db.models import Q
@@ -22,6 +22,7 @@ def index(request):
                                         Q(RUT = queryset)
                                         )
                                 }
+                                return redirect(to="step1")
                         else:
                                 messages.success(request, "Encuesta ya respondida")
                                 datos = {
@@ -36,8 +37,26 @@ def index(request):
                 }
         return render(request, 'app/index.html', datos)
 
-def p1(request):
-    return render(request, 'app/p1.html')
+def step1(request):
+    return render(request, 'app/step1.html')
 
-def p2(request):
-    return render(request, 'app/p2.html')
+def step2(request):
+    return render(request, 'app/step2.html')
+
+def step3(request):
+    return render(request, 'app/step3.html')
+
+def step4(request):
+    return render(request, 'app/step4.html')
+
+def step5(request):
+    return render(request, 'app/step5.html')
+
+def step6(request):
+    return render(request, 'app/step6.html')
+
+def step7(request):
+    return render(request, 'app/step7.html')
+
+def step8(request):
+    return render(request, 'app/step8.html')

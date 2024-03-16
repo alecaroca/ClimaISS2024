@@ -1,0 +1,142 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
+{% load static %}
+<p class="text-cuerpo container-xxl" style="padding-top: 24px;">
+  Por último en una escala de 1 a 10, siendo 1 "totalmente desacuerdo" y 10 "Totalmnete de acuerdo", responda:
+</p>
+
+<div class="separador container-xxl"> </div>
+
+<section class=" bg-general container-xxl">
+
+
+<h2 style="text-align: center; font-size: 26px; padding-top: 48px;">En resumen ¿recomendaría ISS para trabajar?</h2>
+
+
+
+<div class=" row col-12" style="padding-top: 48px;">
+
+  <div class=" col-1 offset-md-1 offset-xl-0" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-1.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        1
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-2.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        2
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-3.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        3
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-4.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        4
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-5.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        5
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-6.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        6
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-7.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        7
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-8.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        8
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-9.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        9
+      </label>
+      </div>
+  </div>
+
+  <div class=" col-1 espacio" style=" text-align: center;">
+    <img src="{% static 'app/img/nota-10.svg' %}" width="48" height="48">
+    <div>
+    <input class="form-check-input tamaño" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width: 20px !important; height: 20px !important;">
+      <label class="form-check-label" for="flexRadioDefault1">
+        10
+      </label>
+      </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+  <div class="separador container-xxl"> </div>
+
+<div class="bt-siguiente container-xxl"> 
+  <a href="{% url 'index' %}"  class="btn btn-danger btn-lg" role="button" aria-pressed="true" style="float: right;">Finalizar</a>
+</div>
+{% endblock %}

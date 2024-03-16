@@ -1,0 +1,230 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
+{% load static %}
+<section class=" bg-secundario container-xxl">
+
+      <p class="text-cuerpo">
+        El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
+  
+      </p>
+  
+      <div class="separador"> </div>
+  
+      <div class=" row col-12" style="padding-top: 48px;">
+  
+        <div class=" col-sm-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
+          <img src="{% static 'app/img/1.svg' %}" width="48" height="48">
+          <p class="caption">Muy Insatisfecho</p> 
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
+          <img src="{% static 'app/img/2.svg' %}" width="48" height="48">
+          <p class="caption">Insatisfecho</p> 
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
+          <img src="{% static 'app/img/3.svg' %}" width="48" height="48">
+          <p class="caption">Indiferente</p> 
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
+          <img src="{% static 'app/img/4.svg' %}" width="48" height="48">
+          <p class="caption">Satisfecho</p> 
+        </div>
+  
+        <div class=" col-sm-2 col-md-1 col-xl-1 " style=" text-align: center;">
+          <img src="{% static 'app/img/5.svg' %}" width="48" height="48">
+          <p class="caption">Muy Satisfecho</p> 
+        </div>
+        
+      </div>
+  
+  
+      <div class=" card-seleccion row col-12 " >
+  
+        <div class=" col-sm-12 col-md-7 row">
+          <div class="big col-1" >9</div>  <div class="col-10" style="padding-top: 8px">Recibo formación / entrenamiento para realizar bien mi trabajo. </div>
+        </div>
+        
+        <div class=" col-sm-2 col-xl-1 margen espaciado " style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="1">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="2">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="3">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="4">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="5">
+         
+        </div>
+        </div>
+        
+  
+        
+      </div>
+  
+  
+      <div class=" card-seleccion row col-12 " >
+  
+        <div class=" col-sm-12 col-md-7 row" >
+          <div class="big col-1">10</div>  <div class="col-11">Me dan los recursos, herramientas e información necesaria para hacer mi trabajo de forma apropiada.</div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="1">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="2">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="3">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="4">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="5">
+         
+        </div>
+        </div>
+        
+      </div>
+  
+  
+      <div class=" card-seleccion row col-12 " >
+  
+        <div class=" col-sm-12 col-md-7 row" >
+          <div class="big col-1">11</div>  <div class="col-11" style="padding-top: 12px">La organización entrega beneficios a los trabajadores más allá del sueldo acordado.</div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center; ">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="1">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="2">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="3">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="4">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="5">
+         
+        </div>
+        </div>
+        
+      </div>
+  
+  
+      <div class=" card-seleccion row col-12 " >
+  
+        <div class=" col-sm-12 col-md-7 row" >
+          <div class="big col-1">12</div>  <div class="col-11">A las personas aquí se les paga justamente por el trabajo que hacen.</div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="1">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="2">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="3">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="4">
+         
+        </div>
+        </div>
+  
+        <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="5">
+         
+        </div>
+        </div>
+        
+      </div>
+  
+      
+  
+  
+      <div class="separador "> </div>
+  
+    <div class="bt-siguiente"> 
+      <a href="{% url 'step5' %}"  class="btn btn-danger btn-lg" role="button" aria-pressed="true" style="float: right;">Siguiente</a>
+  
+    </div>
+    </section>
+{% endblock %}
