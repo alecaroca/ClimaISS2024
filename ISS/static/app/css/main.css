@@ -2,10 +2,9 @@ body{
 	font-family: "Poppins", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 20px;
+	font-size: 16px;
 	color: #4b4e56;
 	background: url("/static/app/img/bg.jpg");
-	
 	background-size: cover;
 	text-align: justify;
 }
@@ -80,7 +79,7 @@ header {
 }
 
 .form {
- padding-top: 190px;
+ padding-top: 100px;
 }
 .text-gris{
 	color: #7f8080;
@@ -95,8 +94,9 @@ header {
 
 .bg-general{
 	background: #ffffff;
-	min-height: 500px;
+	min-height: 300px;
 	width: 100%;
+	margin-top: 32px;
 	margin-bottom: 32px;
 	padding: 24px;
 
@@ -137,7 +137,7 @@ header {
 	width: 101%;
 	height-min: 60px;
 	margin-bottom: 24px;
-	font-size: 18px;
+	font-size: 14px;
 
 }
 .big{
@@ -170,6 +170,58 @@ header {
 	height: 24px;
 }
 
+label{
+	background: #ffffff;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px)  { 
 .modelo {
@@ -180,7 +232,7 @@ header {
  text-align: center;
 }
 .text-cuerpo {
-	font-size: 16px;
+	font-size: 14px;
 }
 h1{
 	font-size: 26px;

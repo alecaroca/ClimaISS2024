@@ -6,35 +6,7 @@ import tkinter as tk
 from .forms import PersonaForm
 # Create your views here.
 
-def index(request):
-    datos = Persona.objects.all()
-    if request.method =='POST':
-                queryset = request.POST['rut']
-                existe = Persona.objects.filter(RUT = queryset)      
-                print(existe)
-                if existe:     
-                                print(queryset)  
-                                existe2  = Persona.objects.get(RUT = queryset)
-                                print(existe2.ESTADO_ENCUESTA)
-                                if existe2.ESTADO_ENCUESTA == None :
-                                        datos = {
-                                                'personas':Persona.objects.filter(
-                                                Q(RUT = queryset)
-                                                )
-                                        }
-                                        return redirect(to="step8")
-                                else:
-                                        messages.success(request, "Encuesta ya respondida")
-                                        datos = {
-                                                'personas': Persona.objects.none()
-                                        
-                                        }            
-                else:
-                        
-                        datos = {
-                                'personas': Persona.objects.none()
-                        
-                        }
+def index(request):                   
     return render(request, 'app/index.html')
 
 def step1(request):
@@ -60,7 +32,7 @@ def step6(request):
 def step7(request):
     RUTE = request.POST['rut']
     persona = Persona.objects.get(RUT=RUTE)
-    persona.ESTADO_ENCUESTA = "OK"
+    persona.ESTADO_ENCUESTA = "1"
     persona.GENERO = request.POST['genero']
     persona.P1 = request.POST['pregunta1']
     persona.P2 = request.POST['pregunta2']
@@ -97,20 +69,26 @@ def step7(request):
     return render(request, 'app/step7.html')
 
 def step8(request):
-    
-    RUTE = request.POST['rut']
-    RUTE2 = request.POST['genero']
-    
-    datos = {
-             'personas':RUTE
-            }
-    
-    print(RUTE)
-    print(RUTE2)
-    print(datos)
-    
-    if RUTE:
-        print(RUTE2)
-        
-          
-    return render(request, 'app/step8.html',{'RUT': RUTE,'GENERO': RUTE2})
+    RUT = request.POST['rut']
+    print(RUT)
+    GENERO = request.POST['genero']  
+    if (RUT!='' and  GENERO!='Seleccionar genero'):
+                print ("pasa el")
+                existe  = Persona.objects.get(RUT = RUT)
+                print(existe)    
+                print(existe.RUT)
+                #Consulta si existen el rut 
+                if existe.RUT:     
+                                #Cnsulta si existe encuesta
+                                if existe.ESTADO_ENCUESTA == None :
+                                    return render(request, 'app/step8.html',{'RUT': RUT,'GENERO': GENERO})  
+     
+                                else:
+                                        messages.success(request, "Tu encuesta ya fue respondida con anterioridad")
+                                                 
+                else:
+                      messages.success(request, "Este rut no se encuentra registrado, favor corrobora los datos ingresados")      
+    else:
+          messages.success(request, "Faltan datos, corrobora los datos ingresados") 
+          return render(request, 'app/index.html')
+    return render(request, 'app/index.html')

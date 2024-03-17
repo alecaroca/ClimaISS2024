@@ -46,7 +46,7 @@
                     <label for="inputPassword6" class="col-form-label">RUT</label>
                   </div>
                   <div class="col-9">
-                    <input type="text"  class="form-control" id="exampleFormControlInput1" placeholder="ingresar RUT" name="rut" required>
+                    <input type="text"  class="form-control" id="exampleFormControlInput1" placeholder="ingresar RUT" name="rut" >
                     <script>
                    
                       </script>
@@ -67,14 +67,8 @@
                   </div>
                 </div>
   
-                <div class="mensaje">
-                  <i>BIENVENIDO/A <br>
-                    {% for pa in personas %}
-                        <p id="demo" class="text-gris">{{pa.NOMBRE}}</p><i></i>
-                        <p id="demo" class="text-gris">{{pa.id}}</p><i></i> 
-                    {% endfor %}
-                 
-                </div>
+          
+                <br><br>
                 <div class="d-grid gap-2">
              
                   <button type="submit" class="btn btn-danger btn-lg" >ACCEDER</button>
