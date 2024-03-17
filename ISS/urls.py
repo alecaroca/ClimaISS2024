@@ -11,5 +11,4 @@ urlpatterns = [
     path('step6/', step6, name="step6"),
     path('step7/', step7, name="step7"),
     path('step8/', step8, name="step8"),
-
 ]

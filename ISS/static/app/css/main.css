@@ -6,8 +6,67 @@ body{
 	color: #4b4e56;
 	background: url("/static/app/img/bg.jpg");
 	
-	background-size: cover
+	background-size: cover;
+	text-align: justify;
 }
+
+
+.form-check-input:checked {
+    background-color: #f08b36;
+    border-color: #f08b36;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="radio"]:focus,
+input[type="select"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(240, 139, 54, 0.9) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(240, 139, 54, 0.8) !important;
+  outline: 0 none !important;
+}
+
+.form-select:focus {   
+  border-color: rgba(240, 139, 54, 0.9) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(240, 139, 54, 0.8) !important;
+  outline: 0 none !important;
+}
+.form-control:focus {
+        border-color: #28a745 !important;
+        box-shadow: 0 0 0 0.2rem rgba(240, 139, 54, 0.25) !important;
+    } 
+
+    select:hover{
+    	background-color: #f08b36;
+    	color: #ffffff;
+    }
+    option:hover {
+  background-color: #28a745;;
+}
+
+select:focus > option:hover { 
+    background: #f08b36 !important;
+}
+
+option:hover {
+  background-color: var(--selectHoverCol);
+  color: #ffffff;
+}
+
+
 .centrar-btns{
 	padding-top: 10px;
 
@@ -27,15 +86,17 @@ header {
 	color: #7f8080;
 }
 .mensaje{
-	padding-top: 24px;
-	padding-bottom: 12px;
+	padding: 24px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	width: 100%;
+	background: #ffffff;
 }
 
 .bg-general{
 	background: #ffffff;
 	min-height: 500px;
 	width: 100%;
-	margin-top: 32px;
 	margin-bottom: 32px;
 	padding: 24px;
 
@@ -64,7 +125,6 @@ header {
 .bg-secundario{
 	min-height: 500px;
 	width: 100%;
-	margin-top: 32px;
 	margin-bottom: 32px;
 	padding: 24px;
 
@@ -74,8 +134,8 @@ header {
 	background: #ffffff;
 	border-radius: 6px;
 	color: #7f8080;
-	width: 100%;
-	height: 60px;
+	width: 101%;
+	height-min: 60px;
 	margin-bottom: 24px;
 	font-size: 18px;
 
@@ -87,8 +147,8 @@ header {
 }
 
 .form-check-input {
-	width: 50px;
-    height: 50px;
+	width: 40px;
+    height: 40px;
 }
 
 .form-check {
@@ -96,16 +156,19 @@ header {
     padding-left: 2.4em;
    }
 
-.tamaño {
-	width: 20px !important;
-    height: 20px ;
-}
-
 .margen {
-	center margin-left: 24px;
+	margin-left: 24px;
+	text-align: center;
 }
 
-
+.tamaño{
+	width: 48px;
+	height: 48px;
+}
+.tamaño-sm{
+	width: 24px;
+	height: 24px;
+}
 
 
 @media (max-width: 768px)  { 
@@ -136,6 +199,7 @@ header {
 .card-seleccion {
 
 	padding-bottom: 12px;
+	width: 107%;
 
 }
 .margen{
@@ -148,11 +212,48 @@ header {
 	margin-left: 8px;
 	text-align: center;
 }
-		
+.form-check-input {
+	width: 26px;
+    height: 26px;
+}
+h1{
+	font-size: 18px;
+}
+
+.caption {
+	font-size: 8px;
+	margin-bottom: 24px;
+}
+
+.margen{
+	margin-left: 0px;
+	
+}
+.espaciado {
+	margin-top: 12px;
+}
+	.tamaño{
+	width: 40px;
+	height: 48px;
+}
+.tamaño-sm{
+	width: 16px;
+	height: 16px;
+}
+.card-seleccion {
+	text-align: justify;
+	font-size: 16px;
+
+}
+h2{
+	font-size: 20px;
+}
+.row {
+    --bs-gutter-x: 1rem;	
 }
 
 @media (max-width: 1269px)  { 
-#detalle-millones{}
+#detalle-millones{
 	
 
 	
@@ -170,3 +271,5 @@ header {
 @media (min-width: 1400px) { 
  
 }
+
+

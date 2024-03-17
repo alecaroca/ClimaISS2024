@@ -90,8 +90,8 @@ button:hover {
   </header>
 
   <section class=" bg-secundario container-xxl">
-    <form id="regForm"  >
-      
+    <form id="regForm" action= "{% url 'step7' %}" method="POST" >
+      {% csrf_token %}
       <!-- One "tab" for each step in the form: -->
       <div class="tab">
         <p class="text-cuerpo">
@@ -138,35 +138,36 @@ button:hover {
           
           <div class=" col-sm-2 col-xl-1 margen espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="1">
+            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="1" required>
+           
+          </div>
+          </div>
+          <input type="text" name="rut" id="rut" value={{RUT}} required>
+          <input type="text" name="genero" id="rut" value={{GENERO}} required>
+          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="2" required>
            
           </div>
           </div>
     
           <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="2">
+            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="3" required>
            
           </div>
           </div>
     
           <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="3">
+            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="4" required>
            
           </div>
           </div>
     
           <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="5">
+            <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="5" required>
            
           </div>
           </div>
