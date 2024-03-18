@@ -9,26 +9,6 @@ from .forms import PersonaForm
 def index(request):                   
     return render(request, 'app/index.html')
 
-def step1(request):
-    return render(request, 'app/step1.html')
-
-def step2(request):   
-
-    return render(request, 'app/step2.html')
-
-def step3(request):
- 
-    return render(request, 'app/step3.html')
-
-def step4(request):
-    return render(request, 'app/step4.html')
-
-def step5(request):
-    return render(request, 'app/step5.html')
-
-def step6(request):
-    return render(request, 'app/step6.html')
-
 def step7(request):
     RUTE = request.POST['rut']
     persona = Persona.objects.get(RUT=RUTE)
@@ -72,22 +52,23 @@ def step8(request):
     RUT = request.POST['rut']
     print(RUT)
     GENERO = request.POST['genero']  
-    if (RUT!='' and  GENERO!='Seleccionar genero'):
+    
+    if (RUT!='' and  GENERO!='Seleccione'):
                 print ("pasa el")
-                existe  = Persona.objects.get(RUT = RUT)
-                print(existe)    
-                print(existe.RUT)
+                existe = Persona.objects.filter(RUT = RUT) 
+                if existe: 
+                    existe2  = Persona.objects.get(RUT = RUT)
                 #Consulta si existen el rut 
-                if existe.RUT:     
-                                #Cnsulta si existe encuesta
-                                if existe.ESTADO_ENCUESTA == None :
-                                    return render(request, 'app/step8.html',{'RUT': RUT,'GENERO': GENERO})  
-     
-                                else:
-                                        messages.success(request, "Tu encuesta ya fue respondida con anterioridad")
-                                                 
+                    if existe2.RUT:     
+                                    #Cnsulta si existe encuesta
+                                    if existe2.ESTADO_ENCUESTA == None :
+                                        return render(request, 'app/step8.html',{'RUT': RUT,'GENERO': GENERO,'NOMBRE': existe2.NOMBRE})  
+        
+                                    else:
+                                            messages.success(request, "Tu encuesta ya fue respondida con anterioridad")
+                                                    
                 else:
-                      messages.success(request, "Este rut no se encuentra registrado, favor corrobora los datos ingresados")      
+                        messages.success(request, "Este rut no se encuentra registrado, favor corrobora los datos ingresados")      
     else:
           messages.success(request, "Faltan datos, corrobora los datos ingresados") 
           return render(request, 'app/index.html')

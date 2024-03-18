@@ -93,6 +93,62 @@ button:hover {
     <form id="regForm" action= "{% url 'step7' %}" method="POST" >
       {% csrf_token %}
       <!-- One "tab" for each step in the form: -->
+      <div class= "tab">
+        
+
+          <p class="text-cuerpo">
+            <b><i>BIENVENIDO/A<span ><br> {{NOMBRE}}</span><i><br><br></b>
+            A continuación te invitamos a contestar nuestra encuesta de clima 2024, su objetivo es conocer las impresiones y experiencias de los coloboradores de ISS en torno a diferentes temáticas.
+            <br><br>
+            Esta encuesta es voluntaria y confidencial, los resultados serán administrados por ID Consulting. Desde ya agradecemos tu participación. En caso de cualquier duda oo consulta, puedes comunicarte directamente a<a href=""> iss_experience@idcoonsulting.cl</a> 
+            <br><br>
+            El siguiente cuesttionario, está construido en base a una puntuacuión en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
+      
+          </p>
+      
+          <div class=" row col-12 " style="padding-top: 16px;">
+      
+            <div class=" col-2 offset-1" style=" text-align: center;">
+              <img src="{% static 'app/img/1.svg' %}" class="tamaño">
+              <p class="caption">Muy Insatisfecho</p> 
+              <input type="hidden"  class="form-control"  placeholder="ingresar RUT" value="1" >
+            </div>
+      
+            <div class=" col-2" style=" text-align: center;">
+              <img src="{% static 'app/img/2.svg' %}" class="tamaño">
+              <p class="caption">Insatisfecho</p> 
+              <input type="hidden"  class="form-control"  placeholder="ingresar RUT" value="2" >
+              
+            </div>
+      
+            <div class=" col-2" style=" text-align: center;">
+              <img src="{% static 'app/img/3.svg' %}" class="tamaño">
+              <p class="caption">Indiferente</p> 
+              <input type="hidden"  class="form-control"  placeholder="ingresar RUT" value="3" >
+            </div>
+      
+            <div class=" col-2" style=" text-align: center;">
+              <img src="{% static 'app/img/4.svg' %}" class="tamaño">
+              <p class="caption">Satisfecho</p> 
+              <input type="hidden"  class="form-control"  placeholder="ingresar RUT"  value="4">
+            </div>
+      
+            <div class=" col-2" style=" text-align: center;">
+              <img src="{% static 'app/img/5.svg' %}" class="tamaño">
+              <p class="caption">Muy Satisfecho</p> 
+              <input type="hidden"  class="form-control"  placeholder="ingresar RUT" value="5" >
+            </div>
+            
+          </div>
+      
+      
+          
+       
+      
+        <div class="separador container-xxl"> </div>
+
+      </div>
+
       <div class="tab">
         <p class="text-cuerpo">
           El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
@@ -137,8 +193,8 @@ button:hover {
             <div class="col" style="padding-top: 12px"> Me gustaría pertenecer a ISS por mucho tiempo. </div>
           </div>
           
-          <div class=" col col-xl-1 margen espaciado " style=" text-align: ">
-            <div class="form-check">
+          <div class=" col col-xl-1 margen espaciado " style=" text-align: center ">
+            <div class="form-check" >
               <input class="form-check-input" type="radio" name="pregunta1" id="pregunta1" value="1" required>
             </div>
           </div>
@@ -172,36 +228,36 @@ button:hover {
     
           <div class=" col-sm-12 col-md-7 row" >
             <div class="big col-2 col-md-1">2</div> 
-            <div class="col"> No dudaría en recomendar esta organización a un amigo que este buscando empleo.</div>
+            <div class="col" style="padding-top: 10px"> No dudaría en recomendar esta organización a un amigo que este buscando empleo.</div>
           </div>
     
           <div class=" col col-xl-1 margen" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="1">
+              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="1" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="2">
+              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="2" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="3">
+              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="3" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="4">
+              <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="4" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="5">
+            <input class="form-check-input" type="radio" name="pregunta2" id="pregunta2" value="5" required>
           </div>
           </div>
           
@@ -217,31 +273,31 @@ button:hover {
     
           <div class=" col col-xl-1 margen" style=" text-align: center; ">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="1">
+              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="1" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="2">
+              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="2" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="3">
+              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="3" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="4">
+              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="4" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="5">
+              <input class="form-check-input" type="radio" name="pregunta3" id="pregunta3" value="5" required>
             </div>
           </div>
         </div>
@@ -251,41 +307,641 @@ button:hover {
     
           <div class=" col-sm-12 col-md-7 row" >
             <div class="big col-2 col-md-1">4</div>  
-            <div class="col"> En esta empresa cumplimos con los plazos y compromisos ante nuestros clientes.</div>
+            <div class="col"style="padding-top: 10px"> En esta empresa cumplimos con los plazos y compromisos ante nuestros clientes.</div>
           </div>
     
           <div class=" col col-xl-1 margen" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="1">
+              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="1" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="2">
+              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="2" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="3">
+              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="3" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="4">
+              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="4" required>
             </div>
           </div>
     
           <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="5">
+              <input class="form-check-input" type="radio" name="pregunta4" id="pregunta4" value="5" required>
             </div>
           </div>
         </div>
+
+        <div class="separador "></div>
+      </div>
+
+      
+      <div class="tab">
+        <p class="text-cuerpo">
+          El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
+        </p>
+    
+        <div class="separador"> </div>
+    
+        <div class=" row " style="padding-top: 16px;">
+    
+          <div class=" col-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
+            <img src="{% static 'app/img/1.svg' %}" class="tamaño">
+            <p class="caption">Muy Insatisfecho</p> 
+          </div>
+    
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/2.svg' %}" class="tamaño">
+            <p class="caption">Insatisfecho</p> 
+          </div>
+    
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/3.svg' %}" class="tamaño">
+            <p class="caption">Indiferente</p> 
+          </div>
+    
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/4.svg' %}" class="tamaño">
+            <p class="caption">Satisfecho</p> 
+          </div>
+    
+          <div class=" col col-md-1 col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/5.svg' %}" class="tamaño">
+            <p class="caption">Muy Satisfecho</p> 
+          </div>
+          
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row">
+            <div class="big col-2 col-md-1" >5</div>  
+            <div class="col" style="padding-top: 12px"> Mi jefe directo reconoce el buen trabajo y el esfuerzo extra.</div>
+          </div>
+          
+          <div class=" col col-xl-1 margen espaciado " style=" text-align: ">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="1">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="2">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="3">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="4">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="5">
+            </div>
+          </div>
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">6</div> 
+            <div class="col" style="padding-top: 12px">Tengo claro quién es mi jefatura.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="1">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="2">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="3">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="4">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="5">
+            </div>
+          </div>
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">7</div>
+            <div class="col" style="padding-top: 12px">Mi jefe directo logra dirigir adecuadamente a su equipo, asignando y coordinando las tareas del área.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center; ">
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="1">
+           
+          </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="2">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="3">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="4">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="5">
+            </div>
+          </div>
+        </div>
+    
+        <div class=" card-seleccion row  col-12 " >
+          <div class=" col-sm-12 col-md-7 row">
+            <div class="big col-2 col-md-1">8</div>  
+            <div class="col" style="padding-top: 10px">Mi jefe directo aprecia el trabajo de todos por igual y evita el favoritismo.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="1">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="2">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="3">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="4">
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="5">
+            </div>
+          </div> 
+        </div>
         <div class="separador "> </div>
       </div>
+
+
+      <div class="tab">
+        <p class="text-cuerpo">
+          El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
+    
+        </p>
+    
+        <div class="separador"> </div>
+    
+
+        <div class=" row " style="padding-top: 16px;">
+        
+          <div class=" col-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
+            <img src="{% static 'app/img/1.svg' %}" class="tamaño">
+            <p class="caption">Muy Insatisfecho</p> 
+          </div>
+
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/2.svg' %}" class="tamaño">
+            <p class="caption">Insatisfecho</p> 
+          </div>
+
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/3.svg' %}" class="tamaño">
+            <p class="caption">Indiferente</p> 
+          </div>
+
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/4.svg' %}" class="tamaño">
+            <p class="caption">Satisfecho</p> 
+          </div>
+
+          <div class=" col col-md-1 col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/5.svg' %}" class="tamaño">
+            <p class="caption">Muy Satisfecho</p> 
+          </div>
+          
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          
+          <div class=" col-sm-12 col-md-7 row">
+            <div class="big col-2 col-md-1" >9</div>  
+            <div class="col" style="padding-top: 10px"> Recibo formación / entrenamiento para realizar bien mi trabajo. </div>
+          </div>
+          
+          <div class=" col col-xl-1 margen espaciado " style=" text-align: ">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="5" required>
+            </div>
+          </div>
+
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+
+            <div class=" col-sm-12 col-md-7 row" >
+              <div class="big col-2 col-md-1">10</div>  
+              <div class="col" style="padding-top: 8px"> Me dan los recursos, herramientas e información necesaria para hacer mi trabajo de forma apropiada.</div>
+            </div>
+    
+            <div class=" col col-xl-1 margen" style=" text-align: center;">
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="1" required>
+              </div>
+            </div>
+    
+            <div class=" col col-xl-1" style=" text-align: center;">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="2" required>
+              </div>
+            </div>
+      
+            <div class=" col col-xl-1" style=" text-align: center;">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="3" required>
+              </div>
+            </div>
+      
+            <div class=" col col-xl-1" style=" text-align: center;">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="4" required>
+              </div>
+            </div>
+      
+            <div class=" col col-xl-1" style=" text-align: center;">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="5" required>
+              </div>
+            </div>
+          
+        </div>
+
+        <div class=" card-seleccion row col-12 " >
+
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">11</div>  
+            <div class="col" style="padding-top: 12px"> La organización entrega beneficios a los trabajadores más allá del sueldo acordado.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center; ">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="5" required>
+            </div>
+          </div>
+          
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">12</div>  
+            <div class="col" style="padding-top: 8px">A las personas aquí se les paga justamente por el trabajo que hacen.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="5" required>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="separador "> </div>
+      </div>
+
+
+      <div class="tab">
+        <p class="text-cuerpo">
+          El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
+    
+        </p>
+    
+        <div class="separador"> </div>
+    
+        <div class=" row " style="padding-top: 16px;">
+    
+          <div class=" col-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
+            <img src="{% static 'app/img/1.svg' %}" class="tamaño">
+            <p class="caption">Muy Insatisfecho</p> 
+          </div>
+    
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/2.svg' %}" class="tamaño">
+            <p class="caption">Insatisfecho</p> 
+          </div>
+    
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/3.svg' %}" class="tamaño">
+            <p class="caption">Indiferente</p> 
+          </div>
+    
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/4.svg' %}" class="tamaño">
+            <p class="caption">Satisfecho</p> 
+          </div>
+    
+          <div class=" col col-md-1 col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/5.svg' %}" class="tamaño">
+            <p class="caption">Muy Satisfecho</p> 
+          </div>
+          
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row">
+            <div class="big col-2 col-md-1" >13</div>  
+            <div class="col" style="padding-top: 12px"> Puedo tomar decisiones respecto a cómo hacer mis tareas diarias.</div>
+          </div>
+          
+          <div class=" col col-xl-1 margen espaciado " style=" text-align: ">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="5" required>
+            </div>
+          </div>
+
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">14</div>  
+            <div class="col" style="padding-top: 8px"> El espacio físico de mi área es un lugar físicamente seguro y cómodo para realizar mi trabajo.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="5" required>
+            </div>
+          </div>
+          
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">15</div>  
+            <div class="col" style="padding-top: 12px">La empresa nos mantiene informados acerca de temas y cambios importantes para el rumbo de la Empresa a través de los canales de comunicación oficial. </div>
+          </div>
+    
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center; ">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="5" required>
+            </div>
+          </div>
+          
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">16</div>  
+            <div class="col" style="padding-top: 12px">Tengo buena comunicación con mis compañeros de trabajo.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="5" required>
+            </div>
+          </div>
+          
+        </div>
+    
+        <div class="separador "> </div>
+      </div>
+
       
       <div class="tab">
         <p class="text-cuerpo">
@@ -295,30 +951,30 @@ button:hover {
     
         <div class="separador"> </div>
     
-        <div class=" row col-12" style="padding-top: 48px;">
+        <div class=" row " style="padding-top: 16px;">
     
-          <div class=" col-sm-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
-            <img src="{% static 'app/img/1.svg' %}" width="48" height="48">
+          <div class=" col-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
+            <img src="{% static 'app/img/1.svg' %}" class="tamaño">
             <p class="caption">Muy Insatisfecho</p> 
           </div>
     
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/2.svg' %}" width="48" height="48">
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/2.svg' %}" class="tamaño">
             <p class="caption">Insatisfecho</p> 
           </div>
     
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/3.svg' %}" width="48" height="48">
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/3.svg' %}" class="tamaño">
             <p class="caption">Indiferente</p> 
           </div>
     
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/4.svg' %}" width="48" height="48">
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/4.svg' %}" class="tamaño">
             <p class="caption">Satisfecho</p> 
           </div>
     
-          <div class=" col-sm-2 col-md-1 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/5.svg' %}" width="48" height="48">
+          <div class=" col col-md-1 col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/5.svg' %}" class="tamaño">
             <p class="caption">Muy Satisfecho</p> 
           </div>
           
@@ -328,133 +984,80 @@ button:hover {
         <div class=" card-seleccion row col-12 " >
     
           <div class=" col-sm-12 col-md-7 row">
-            <div class="big col-1" >5</div>  <div class="col-10" style="padding-top: 8px">Mi jefe directo reconoce el buen trabajo y el esfuerzo extra.</div>
+            <div class="big col-2 col-md-1" >17</div>  
+            <div class="col" style="padding-top: 12px"> Los ascensos se determinan de manera meritocrática. </div>
           </div>
           
-          <div class=" col-sm-2 col-xl-1 margen espaciado " style=" text-align: center;">
+          <div class=" col col-xl-1 margen espaciado " style=" text-align: ">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta5" id="pregunta5" value="5">
-           
-          </div>
-          </div>
-          
-    
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">6</div>  <div class="col-11">Tengo claro quién es mi jefatura.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta6" id="pregunta6" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">7</div>  <div class="col-11" style="padding-top: 12px">Mi jefe directo logra dirigir adecuadamente a su equipo, asignando y coordinando las tareas del área.
+              <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="1" required>
             </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center; ">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="1">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="2" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="2">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="3" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="3">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="4" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="4">
-           
+              <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="5" required>
+            </div>
           </div>
+          
+    
+          
+        </div>
+    
+    
+        <div class=" card-seleccion row col-12 " >
+    
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">18</div>  
+            <div class="col" style="padding-top: 8px"> En la organización se propician la generación de espacios para el reconocimiento formal e informal.</div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta7" id="pregunta7" value="5">
-           
+              <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="1" required>
+            </div>
           </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="5" required>
+            </div>
           </div>
           
         </div>
@@ -463,51 +1066,86 @@ button:hover {
         <div class=" card-seleccion row col-12 " >
     
           <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">8</div>  <div class="col-11">Mi jefe directo aprecia el trabajo de todos por igual y evita el favoritismo.</div>
+            <div class="big col-2 col-md-1">19</div>  
+            <div class="col" style="padding-top: 8px">Las personas son tratadas justamente sin importar su género, edad, raza o condición social.</div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
+          <div class=" col col-xl-1 margen" style=" text-align: center; ">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="1">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="1" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="2">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="2" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="3">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="3" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="4">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="4" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta8" id="pregunta8" value="5">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="5" required>
+            </div>
           </div>
           
         </div>
     
-        
     
+        <div class=" card-seleccion row col-12 " >
     
+          <div class=" col-sm-12 col-md-7 row" >
+            <div class="big col-2 col-md-1">20</div>  
+            <div class="col" style="padding-top: 8px"> En esta empresa cumplimos con los plazos y compromisos ante nuestros clientes.</div>
+          </div>
+    
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="1" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="2" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="3" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="4" required>
+            </div>
+          </div>
+    
+          <div class=" col col-xl-1" style=" text-align: center;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="5" required>
+            </div>
+          </div>
+          
+        </div>
+
         <div class="separador "> </div>
       </div>
+
+
       <div class="tab">
         <p class="text-cuerpo">
           El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
@@ -516,30 +1154,30 @@ button:hover {
     
         <div class="separador"> </div>
     
-        <div class=" row col-12" style="padding-top: 48px;">
+        <div class=" row " style="padding-top: 16px;">
     
-          <div class=" col-sm-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
-            <img src="{% static 'app/img/1.svg' %}" width="48" height="48">
+          <div class=" col-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
+            <img src="{% static 'app/img/1.svg' %}" class="tamaño">
             <p class="caption">Muy Insatisfecho</p> 
           </div>
     
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/2.svg' %}" width="48" height="48">
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/2.svg' %}" class="tamaño">
             <p class="caption">Insatisfecho</p> 
           </div>
     
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/3.svg' %}" width="48" height="48">
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/3.svg' %}" class="tamaño">
             <p class="caption">Indiferente</p> 
           </div>
     
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/4.svg' %}" width="48" height="48">
+          <div class=" col col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/4.svg' %}" class="tamaño">
             <p class="caption">Satisfecho</p> 
           </div>
     
-          <div class=" col-sm-2 col-md-1 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/5.svg' %}" width="48" height="48">
+          <div class=" col col-md-1 col-xl-1 " style=" text-align: center;">
+            <img src="{% static 'app/img/5.svg' %}" class="tamaño">
             <p class="caption">Muy Satisfecho</p> 
           </div>
           
@@ -549,88 +1187,38 @@ button:hover {
         <div class=" card-seleccion row col-12 " >
     
           <div class=" col-sm-12 col-md-7 row">
-            <div class="big col-1" >9</div>  <div class="col-10" style="padding-top: 8px">Recibo formación / entrenamiento para realizar bien mi trabajo. </div>
+            <div class="big col-2 col-md-1" >21</div>  
+            <div class="col" style="padding-top: 12px"> La empresa está comprometida con la inclusión y la diversidad. </div>
           </div>
           
-          <div class=" col-sm-2 col-xl-1 margen espaciado " style=" text-align: center;">
+          <div class=" col col-xl-1 margen espaciado " style=" text-align: ">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="1">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="1" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="2">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="2" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="3">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="3" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="4">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="4" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
+          <div class=" col col-xl-1 espaciado " style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta9" id="pregunta9" value="5">
-           
-          </div>
-          </div>
-          
-    
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">10</div>  <div class="col-11">Me dan los recursos, herramientas e información necesaria para hacer mi trabajo de forma apropiada.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta10" id="pregunta10" value="5">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="5" required>
+            </div>
           </div>
           
         </div>
@@ -639,42 +1227,38 @@ button:hover {
         <div class=" card-seleccion row col-12 " >
     
           <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">11</div>  <div class="col-11" style="padding-top: 12px">La organización entrega beneficios a los trabajadores más allá del sueldo acordado.</div>
+            <div class="big col-2 col-md-1">22</div>  
+            <div class="col" style="padding-top: 12px"> Me siento seguro y estable en mi trabajo.</div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center; ">
+          <div class=" col col-xl-1 margen" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="1">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="1" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="2">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="2" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="3">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="3" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="4">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="4" required>
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta11" id="pregunta11" value="5">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="5" required>
+            </div>
           </div>
           
         </div>
@@ -683,658 +1267,38 @@ button:hover {
         <div class=" card-seleccion row col-12 " >
     
           <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">12</div>  <div class="col-11">A las personas aquí se les paga justamente por el trabajo que hacen.</div>
+            <div class="big col-2 col-md-1">23</div>  
+            <div class="col" style="padding-top: 12px">La empresa demuestra preocupación por la seguridad de las personas, implementando planes y estrategias para el cuidado de las personas.</div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
+          <div class=" col col-xl-1 margen" style=" text-align: center; ">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="1">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="1" required>           
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="2">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="2" required>           
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="3">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="3" required>           
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="4">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="4" required>           
+            </div>
           </div>
     
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
+          <div class=" col col-xl-1" style=" text-align: center;">
             <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta12" id="pregunta12" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-        
-    
-    
-        <div class="separador "> </div>
-      </div>
-      <div class="tab">
-        <p class="text-cuerpo">
-          El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
-    
-        </p>
-    
-        <div class="separador"> </div>
-    
-        <div class=" row col-12" style="padding-top: 48px;">
-    
-          <div class=" col-sm-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
-            <img src="{% static 'app/img/1.svg' %}" width="48" height="48">
-            <p class="caption">Muy Insatisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/2.svg' %}" width="48" height="48">
-            <p class="caption">Insatisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/3.svg' %}" width="48" height="48">
-            <p class="caption">Indiferente</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/4.svg' %}" width="48" height="48">
-            <p class="caption">Satisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-md-1 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/5.svg' %}" width="48" height="48">
-            <p class="caption">Muy Satisfecho</p> 
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row">
-            <div class="big col-1" >13</div>  <div class="col-10" style="padding-top: 8px">Puedo tomar decisiones respecto a cómo hacer mis tareas diarias.</div>
-          </div>
-          
-          <div class=" col-sm-2 col-xl-1 margen espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta13" id="pregunta13" value="5">
-           
-          </div>
-          </div>
-          
-    
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">14</div>  <div class="col-11">El espacio físico de mi área es un lugar físicamente seguro y cómodo para realizar mi trabajo.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta14" id="pregunta14" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">15</div>  <div class="col-11" style="padding-top: 12px">La empresa nos mantiene informados acerca de temas y cambios importantes para el rumbo de la Empresa a través de los canales de comunicación oficial.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center; ">
-            <div class="form-check">
-          <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta15" id="pregunta15" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">16</div>  <div class="col-11">Tengo buena comunicación con mis compañeros de trabajo.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta16" id="pregunta16" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-        
-    
-    
-        <div class="separador "> </div>
-      </div>
-      <div class="tab">
-        <p class="text-cuerpo">
-          El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
-    
-        </p>
-    
-        <div class="separador"> </div>
-    
-        <div class=" row col-12" style="padding-top: 48px;">
-    
-          <div class=" col-sm-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
-            <img src="{% static 'app/img/1.svg' %}" width="48" height="48">
-            <p class="caption">Muy Insatisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/2.svg' %}" width="48" height="48">
-            <p class="caption">Insatisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/3.svg' %}" width="48" height="48">
-            <p class="caption">Indiferente</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/4.svg' %}" width="48" height="48">
-            <p class="caption">Satisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-md-1 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/5.svg' %}" width="48" height="48">
-            <p class="caption">Muy Satisfecho</p> 
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row">
-            <div class="big col-1" >17</div>  <div class="col-10" style="padding-top: 8px">Los ascensos se determinan de manera meritocrática.</div>
-          </div>
-          
-          <div class=" col-sm-2 col-xl-1 margen espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta17" id="pregunta17" value="5">
-           
-          </div>
-          </div>
-          
-    
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">18</div>  <div class="col-11">En 18-la organización se propician la generación de espacios para el reconocimiento formal e informal.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta18" id="pregunta18" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">19</div>  <div class="col-11" style="padding-top: 12px">Las personas son tratadas justamente sin importar su género, edad, raza o condición social.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center; ">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta19" id="pregunta19" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">20</div>  <div class="col-11">Recibo un buen trato, independiente de mi posición en la organización.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta20" id="pregunta20" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-        
-    
-    
-        <div class="separador "> </div>
-      </div>
-      <div class="tab">
-        <p class="text-cuerpo">
-          El siguiente cuestionario, está construido en base a una puntuación en escala Likert, esta evaluación posee 5 alternativas posibles, siendo la 1 la de mayor insatisfacción y 5 la de mayor satisfacción.
-    
-        </p>
-    
-        <div class="separador"> </div>
-    
-        <div class=" row col-12" style="padding-top: 48px;">
-    
-          <div class=" col-sm-2 col-xl-1 offset-xl-7 offset-sm-1" style=" text-align: center;">
-            <img src="{% static 'app/img/1.svg' %}" width="48" height="48">
-            <p class="caption">Muy Insatisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/2.svg' %}" width="48" height="48">
-            <p class="caption">Insatisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/3.svg' %}" width="48" height="48">
-            <p class="caption">Indiferente</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/4.svg' %}" width="48" height="48">
-            <p class="caption">Satisfecho</p> 
-          </div>
-    
-          <div class=" col-sm-2 col-md-1 col-xl-1 " style=" text-align: center;">
-            <img src="{% static 'app/img/5.svg' %}" width="48" height="48">
-            <p class="caption">Muy Satisfecho</p> 
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row">
-            <div class="big col-1" >21</div>  <div class="col-10" style="padding-top: 8px">La empresa está comprometida con la inclusión y la diversidad.</div>
-          </div>
-          
-          <div class=" col-sm-2 col-xl-1 margen espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 espaciado " style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta21" id="pregunta21" value="5">
-           
-          </div>
-          </div>
-          
-    
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">22</div>  <div class="col-11">Me siento seguro y estable en mi trabajo.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta22" id="pregunta22" value="5">
-           
-          </div>
-          </div>
-          
-        </div>
-    
-    
-        <div class=" card-seleccion row col-12 " >
-    
-          <div class=" col-sm-12 col-md-7 row" >
-            <div class="big col-1">23</div>  <div class="col-11" style="padding-top: 12px">La empresa demuestra preocupación por la seguridad de las personas, implementando planes y estrategias para el cuidado de las personas.</div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1 margen" style=" text-align: center; ">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="1">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="2">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="3">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="4">
-           
-          </div>
-          </div>
-    
-          <div class=" col-sm-2 col-xl-1" style=" text-align: center;">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="5">
-           
-          </div>
+              <input class="form-check-input" type="radio" name="pregunta23" id="pregunta23" value="5" required>           
+            </div>
           </div>
           
         </div>   
@@ -1342,148 +1306,139 @@ button:hover {
     
         <div class="separador "> </div>
       </div>
+
+
       <div class="tab">
-        <p class="text-cuerpo container-xxl" style="padding-top: 24px;">
+        <p class="text-cuerpo " style="padding-top: 24px;">
           Por último en una escala de 1 a 10, siendo 1 "totalmente desacuerdo" y 10 "Totalmnete de acuerdo", responda:
         </p>
     
         <div class="separador container-xxl"> </div>
       
-      <section class=" bg-general container-xxl">
+        <section class=" bg-general container-xxl">
     
-    
-        <h2 style="text-align: center; font-size: 26px; padding-top: 48px;">En resumen ¿recomendaría ISS para trabajar?</h2>
+        
+         <h2 style="text-align: center; font-size: 26px; padding-top: 24px;">En resumen ¿recomendaría ISS para trabajar?</h2>
     
         
     
-        <div class=" row col-12" style="padding-top: 48px;">
-    
-          <div class=" col-1 offset-md-1 offset-xl-0" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-1.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="1" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                1
-              </label>
+            <div class=" row " style="padding-top: 22px;">
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-1.svg' %}" >
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="1" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    1
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-2.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="2" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                2
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-2.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="2" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    2
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-3.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="3" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                3
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-3.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="3" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    3
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-4.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="4" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                4
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-4.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="4" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    4
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-5.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="5" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                5
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-5.svg' %}" >
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="5" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    5
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-6.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="6" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                6
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-6.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="6" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    6
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-7.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="7" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                7
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-7.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="7"  required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    7
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-8.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="8" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                8
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-8.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="8" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    8
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-9.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="9" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                9
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-9.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="9" required >
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    9
+                  </label>
+                  </div>
               </div>
-          </div>
-    
-          <div class=" col-1 espacio" style=" text-align: center;">
-            <img src="{% static 'app/img/nota-10.svg' %}" width="48" height="48">
-            <div>
-            <input class="form-check-input tamaño" type="radio" name="pregunta24" id="pregunta24" value="10" style="width: 20px !important; height: 20px !important;">
-              <label class="form-check-label" for="flexRadioDefault1">
-                10
-              </label>
+        
+              <div class=" col" style=" text-align: center;">
+                <img src="{% static 'app/img/nota-10.svg' %}">
+                <div>
+                <input class="form-check-input tamaño-sm" type="radio" name="pregunta24" id="pregunta24" value="10" required>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    10
+                  </label>
+                  </div>
               </div>
-          </div>
           
-        </div>
+            </div>
     
-    
-        
-    
-       
-    
-    
-       
-    
-        
-    
-        
-    
-    
-    
-      </section>
+        </section>
 
       </div>
+
       <div style="overflow:auto;">
         <div style="float:right;" class="container-xxl bt-siguiente">
           <a onclick="nextPrev(1)"  id="nextBtn" class="btn btn-danger btn-lg" role="button" aria-pressed="true" style="float: right;">Siguiente</a>
         </div>
       </div>
+
       <!-- Circles which indicates the steps of the form: -->
       <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
